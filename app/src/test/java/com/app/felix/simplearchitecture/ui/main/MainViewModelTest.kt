@@ -42,7 +42,7 @@ class MainViewModelTest {
     @Test
     fun `test load fact and categories correctly`() = runBlockingTest {
         val chuckNorrisFact = ChuckNorrisFact(
-            icon_url = "minha_url",
+            iconUrl = "minha_url",
             id = "1",
             url = "minha_url",
             value = "alguma coisa sobre o chuck norrus"
@@ -78,9 +78,9 @@ class MainViewModelTest {
     }
 
     @Test
-    fun `test fetch fact with selected category`() {
+    fun `test fetch fact with selected category`() = runBlockingTest {
         val chuckNorrisFact = ChuckNorrisFact(
-            icon_url = "minha_url",
+            iconUrl = "minha_url",
             id = "1",
             url = "minha_url",
             value = "alguma coisa sobre o chuck norrus"
@@ -88,7 +88,7 @@ class MainViewModelTest {
         coEvery { repository.getRandomFact() } returns ResultState.Success(chuckNorrisFact)
 
         val categorizedChuckNorrisFact = ChuckNorrisFact(
-            icon_url = "minha_url",
+            iconUrl = "minha_url",
             id = "2",
             url = "minha_url",
             value = "alguma outra coisa sobre o chuck norrus"
