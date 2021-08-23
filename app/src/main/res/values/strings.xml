@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Simple Architecture</string>
+
+    <string name="error">Ops! some error occurred</string>
+    <string name="try_again">Try again</string>
+    <string name="try_another">Try another fact!</string>
+    <string name="choose_category">Choose category</string>
+</resources>
